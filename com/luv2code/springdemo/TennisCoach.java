@@ -1,21 +1,18 @@
 package com.luv2code.springdemo;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class TennisCoach implements Coach {
 	
+	@Autowired
+	@Qualifier("randomService")
 	private FortuneService fortuneService;
 	
 	public TennisCoach() {
 		System.out.println("TennisCoach default constructor called");
-	}
-	
-	@Autowired
-	public void setFortuneService(FortuneService fortuneService) {
-		System.out.println("TennisCoach: setFortuneService called");
-		this.fortuneService = fortuneService;
 	}
 	
 	@Override
