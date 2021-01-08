@@ -10,4 +10,10 @@ public class BoxingCoach implements Coach {
 		return "Throw 300 jabs, 300 hooks, and 300 upper-cuts";
 	}
 
+	@Override
+	public String getDailyFortune() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
